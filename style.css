@@ -1,0 +1,107 @@
+:root {
+  --lime:    #c8f000;
+  --yellow:  #ffe135;
+  --coral:   #ff5c35;
+  --black:   #111111;
+  --white:   #fffff5;
+  --offwhite: #f7f5ee;
+  --navy:    #0d0d1a;
+  --gray:    #555555;
+
+  --border:  3px solid #111111;
+  --shadow:  5px 5px 0 #111111;
+  --radius:  12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-color: var(--offwhite);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  background-color: var(--black);
+  border-bottom: 3px solid var(--lime);
+}
+
+.nav-logo {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--lime);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgba(255, 255, 245, 0.65);
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--lime);
+  color: var(--black);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--lime);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
