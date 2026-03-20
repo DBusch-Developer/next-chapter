@@ -105,3 +105,15 @@ ul {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Footer */
+
+footer {
+  background-color: var(--black);
+  color: rgba(255, 255, 245, 0.4);
+  text-align: center;
+  padding: 1.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  border-top: var(--border);
+}
