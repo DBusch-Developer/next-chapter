@@ -1,3 +1,24 @@
+//  Mobile Navigation Toggle
+
+const hamburger = document.getElementById("hamburger");
+const navLinks  = document.getElementById("nav-links");
+
+if (hamburger && navLinks) {
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+  });
+
+  const allNavLinks = navLinks.querySelectorAll("a");
+
+  for (let i = 0; i < allNavLinks.length; i++) {
+    allNavLinks[i].addEventListener("click", function () {
+      navLinks.classList.remove("open");
+    });
+  }
+
+}
+
 // Footer Year Update
 
 const yearElements = document.querySelectorAll(".yr");
