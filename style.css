@@ -375,3 +375,191 @@ footer {
   color: rgba(255, 255, 245, 0.55);
   line-height: 1.65;
 }
+
+/* Myths Page Header */
+.page-header {
+  padding: 110px 0 60px;
+  border-bottom: var(--border);
+}
+
+.page-header.header-lime  { background-color: var(--lime); }
+.page-header.header-coral { background-color: var(--coral); color: white; }
+
+.page-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: normal;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Counter Bar */
+.counter-bar {
+  background-color: var(--black);
+  color: var(--lime);
+  text-align: center;
+  padding: 0.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  border-bottom: var(--border);
+}
+
+#bust-count {
+  color: var(--yellow);
+  font-size: 1.1rem;
+}
+
+/* Myth Flip Cards */
+.myths-section {
+  padding: 72px 0;
+  background-color: var(--offwhite);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* The outer wrapper — sets the 3D perspective */
+.flip-card {
+  height: 280px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+/* The inner div is what actually rotates */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* When JS adds the "flipped" class, the inner div rotates */
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Both sides share these base styles */
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: calc(var(--radius) - 2px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* The back faces start rotated 180deg — so they're hidden by default */
+.card-back {
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+/* Card color themes */
+.card-front.yellow  { background-color: var(--yellow); }
+.card-front.lime    { background-color: var(--lime);   }
+.card-front.coral   { background-color: var(--coral); color: white; }
+.card-back.back-yellow { background-color: var(--yellow); }
+.card-back.back-lime   { background-color: var(--lime);   }
+.card-back.back-coral  { background-color: var(--coral); color: white; }
+
+.card-number {
+  font-family: Arial, sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+}
+
+.card-front p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.flip-hint {
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.busted-tag {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  background-color: var(--black);
+  color: var(--lime);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.card-back h3 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.card-back.back-coral h3 { color: white; }
+
+.card-back p {
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  opacity: 0.8;
+  flex: 1;
+  padding: 0.4rem 0;
+}
+
+/* All busted celebration box */
+.all-busted {
+  text-align: center;
+  background-color: var(--lime);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.all-busted span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.all-busted h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.all-busted p {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
