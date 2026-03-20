@@ -50,3 +50,19 @@ if (flipCards.length > 0) {
     });
   }
 }
+
+// Tips Accordion
+const accordionBtns = document.querySelectorAll(".accordion-btn");
+
+if (accordionBtns.length > 0) {
+
+  for (let i = 0; i < accordionBtns.length; i++) {
+
+    accordionBtns[i].addEventListener("click", function () {
+
+      const item = this.parentElement;
+      item.classList.toggle("open");
+
+    });
+  }
+}
